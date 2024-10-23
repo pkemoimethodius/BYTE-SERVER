@@ -24,7 +24,7 @@ def create_app():
 
     # Create all tables within the application context
     with app.app_context():
-        db.create_all()  
+        db.create_all()
 
         # Register the routes with the app instance
         routes.register_routes(app)
@@ -39,4 +39,4 @@ def create_app():
 # This part ensures the app factory is callable
 if __name__ == "__main__":
     app = create_app()
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', debug=False)
